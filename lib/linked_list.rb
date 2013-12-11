@@ -3,9 +3,11 @@ require 'linked_list_item'
 class LinkedList
 
   attr_reader :size
+  attr_reader :last
 
   def initialize *args
     @first_item = nil
+    @last = nil
     @size = 0
   end
 
@@ -13,6 +15,7 @@ class LinkedList
     new_item = LinkedListItem.new(payload)
     if @first_item.nil?
       @size = 1
+      @last = new_item
       @first_item = new_item
     else
       last_item = @first_item
