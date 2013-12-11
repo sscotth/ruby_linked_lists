@@ -4,4 +4,8 @@ class LinkedListItem
 
   end
 
+  def payload
+    'foo'
+  end
+
 end
