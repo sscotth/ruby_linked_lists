@@ -16,7 +16,7 @@ class LinkedListItem
   end
 
   def last?
-    true
+    next_list_item.nil?
   end
 
 end
