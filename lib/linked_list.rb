@@ -2,7 +2,7 @@ require 'linked_list_item'
 
 class LinkedList
 
-  def initialize
+  def initialize *args
     @first_item = nil
   end
 
@@ -20,6 +20,7 @@ class LinkedList
   end
 
   def get(item_index)
+    raise IndexError if item_index < 0
     item = @first_item
     item_index.times do
       raise IndexError if item.nil?
