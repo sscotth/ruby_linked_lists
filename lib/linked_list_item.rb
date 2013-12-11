@@ -1,7 +1,7 @@
 class LinkedListItem
   include Comparable
-  attr_accessor :payload
-  attr_accessor :next_list_item
+  attr_reader :payload
+  attr_reader :next_list_item
 
   def initialize(payload)
     @payload = payload
