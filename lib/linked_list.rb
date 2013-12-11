@@ -29,4 +29,8 @@ class LinkedList
     item.payload
   end
 
+  def size
+    0
+  end
+
 end
