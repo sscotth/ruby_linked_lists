@@ -22,6 +22,7 @@ class LinkedList
   def get(item_index)
     item = @first_item
     item_index.times do
+      raise IndexError if item.nil?
       item = item.next_list_item
     end
     item.payload
