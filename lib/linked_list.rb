@@ -41,4 +41,7 @@ class LinkedList
     @last.payload unless @last.nil?
   end
 
+  def to_s
+    '| |'
+  end
 end
