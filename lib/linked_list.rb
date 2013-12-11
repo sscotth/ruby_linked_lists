@@ -42,6 +42,18 @@ class LinkedList
   end
 
   def to_s
-    '| |'
+    self.to_a.empty? ? "| |" : "| #{self.to_a.join(', ')} |"
+  end
+
+  def to_a
+    each_item = @first_item
+    payloads = []
+
+    while each_item do
+      payloads << each_item.payload
+      each_item = each_item.next_list_item
+    end
+
+    payloads
   end
 end
