@@ -15,4 +15,8 @@ class LinkedListItem
     @next_list_item = linked_list_item
   end
 
+  def last?
+    true
+  end
+
 end
