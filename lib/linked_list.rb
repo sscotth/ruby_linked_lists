@@ -8,6 +8,9 @@ class LinkedList
     @first_item = nil
     @last = nil
     @size = 0
+    args.each do |arg|
+      add_item(arg)
+    end
   end
 
   def add_item(payload)
