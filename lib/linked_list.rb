@@ -81,4 +81,8 @@ class LinkedList
     end
   end
 
+  def indexOf(payload)
+    0
+  end
+
 end
