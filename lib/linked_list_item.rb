@@ -3,7 +3,7 @@ class LinkedListItem
   attr_accessor :payload
   attr_reader :next_list_item
 
-  def initialize(payload)
+  def initialize payload
     @payload = payload
   end
 
@@ -16,7 +16,7 @@ class LinkedListItem
     next_list_item.nil?
   end
 
-  def <=> other
+  def <=>(other)
     if self.payload.class == Symbol or other.payload.class == Symbol
       self.payload.class.to_s <=> other.payload.class.to_s
     else
@@ -24,7 +24,7 @@ class LinkedListItem
     end
   end
 
-  def === other
+  def ===(other)
     self.object_id == other.object_id
   end
 
