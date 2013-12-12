@@ -59,4 +59,9 @@ class LinkedList
 
     payloads
   end
+
+  def [](item_index)
+    get(item_index)
+  end
+
 end
