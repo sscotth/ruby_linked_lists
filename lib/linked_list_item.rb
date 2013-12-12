@@ -17,7 +17,11 @@ class LinkedListItem
   end
 
   def <=> other
-    self.payload.to_s <=> other.payload.to_s
+    if self.payload.class == Symbol or other.payload.class == Symbol
+      self.payload.class.to_s <=> other.payload.class.to_s
+    else
+      self.payload.to_s <=> other.payload.to_s
+    end
   end
 
   def === other
