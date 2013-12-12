@@ -72,4 +72,8 @@ class LinkedList
     get_item(item_index).payload = payload
   end
 
+  def remove(item_index)
+    @size -= 1
+  end
+
 end
