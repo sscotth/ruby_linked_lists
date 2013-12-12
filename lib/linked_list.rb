@@ -92,6 +92,11 @@ class LinkedList
   end
 
   def sorted?
+    item = @first_item
+    until item.nil? || item.next_list_item.nil? || @size < 2
+      return false if item > item.next_list_item
+      item = item.next_list_item
+    end
     true
   end
 
