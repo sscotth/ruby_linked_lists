@@ -31,13 +31,17 @@ class LinkedList
   end
 
   def get(item_index)
+    get_item(item_index).payload
+  end
+
+  def get_item(item_index)
     raise IndexError if item_index < 0
     item = @first_item
     item_index.times do
       raise IndexError if item.nil?
       item = item.next_list_item
     end
-    item.payload
+    item
   end
 
   def last
@@ -62,6 +66,10 @@ class LinkedList
 
   def [](item_index)
     get(item_index)
+  end
+
+  def []=(item_index, payload)
+    get_item(item_index).payload = payload
   end
 
 end
