@@ -74,7 +74,11 @@ class LinkedList
 
   def remove(item_index)
     @size -= 1
-    get_item(item_index - 1).next_list_item = get_item(item_index + 1)
+    if item_index == 0
+      @first_item = @first_item.next_list_item
+    else
+      get_item(item_index - 1).next_list_item = get_item(item_index + 1)
+    end
   end
 
 end
