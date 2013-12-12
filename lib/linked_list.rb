@@ -91,4 +91,8 @@ class LinkedList
     end
   end
 
+  def sorted?
+    true
+  end
+
 end
