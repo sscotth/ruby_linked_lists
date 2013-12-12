@@ -4,7 +4,7 @@ class LinkedList
 
   attr_reader :size
 
-  def initialize *args
+  def initialize(*args)
     @first_item = nil
     @last = nil
     @size = 0
