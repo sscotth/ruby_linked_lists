@@ -82,7 +82,13 @@ class LinkedList
   end
 
   def indexOf(payload)
-    0
+    item = @first_item
+    index = 0
+    while item
+      return index if payload == item.payload
+      item = item.next_list_item
+      index += 1
+    end
   end
 
 end
